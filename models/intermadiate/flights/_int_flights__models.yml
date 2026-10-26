@@ -6,16 +6,19 @@ models:
       node_color: red
     config: 
       contract: {enforced: true}
-    meta:
-      owner: 'TermiDD'
-      contact_tg: andreykhokhlov
-      status: in_dev
+      meta: 
+        owner: 'yml_file_owner@gmail.com'
+        status: in_dev
     
     columns:
       - name: book_ref
         data_type: varchar(8)
         constraints:
           - type: not_null
+        tags: 
+          - 'facts'
+          - 'flights'
+        tests: [not_null, unique]
       - name: book_date
         data_type: timestamptz
       - name: total_amount
