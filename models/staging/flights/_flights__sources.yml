@@ -79,3 +79,11 @@ sources:
         - name: flight_id
         - name: fare_conditions
         - name: amount
+    - name: tickets
+      description: Билеты
+      columns:
+        - name: ticket_no
+        - name: book_ref
+        - name: passenger_id
+        - name: passenger_name
+        - name: contact_data
