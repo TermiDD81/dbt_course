@@ -6,7 +6,7 @@
 
 select
   flight_id,
-  flight_no,
+  flight_no::varchar(10) as flight_no,
   scheduled_departure,
   scheduled_arrival,
   departure_airport,
@@ -14,7 +14,8 @@ select
   "status",
   aircraft_code,
   actual_departure,
-  actual_arrival
+  actual_arrival,
+  'Hi everyone' as new_columns
 from 
   {{ source('demo_src', 'flights') }}
     
